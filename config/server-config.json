@@ -1,0 +1,242 @@
+{
+  "categories": [
+    {
+      "name": "━━━ INFORMATION ━━━",
+      "channels": [
+        { "name": "welcome", "type": "text" },
+        { "name": "rules", "type": "text" },
+        { "name": "announcements", "type": "text" },
+        { "name": "start-here", "type": "text" },
+        { "name": "roles", "type": "text" }
+      ]
+    },
+    {
+      "name": "━━━ GENERAL HUB ━━━",
+      "channels": [
+        { "name": "general-chat", "type": "text" },
+        { "name": "memes", "type": "text" },
+        { "name": "off-topic", "type": "text" },
+        { "name": "introductions", "type": "text" }
+      ]
+    },
+    {
+      "name": "━━ BATCH 2027 ━━",
+      "permissionOverwrites": [
+        { "role": "Batch 2027", "allow": ["ViewChannel", "SendMessages"] },
+        { "role": "@everyone", "deny": ["ViewChannel"] }
+      ],
+      "channels": [
+        { "name": "batch-2027-chat", "type": "text" },
+        { "name": "batch-2027-announcements", "type": "text" }
+      ]
+    },
+    {
+      "name": "━━ BATCH 2028 ━━",
+      "permissionOverwrites": [
+        { "role": "Batch 2028", "allow": ["ViewChannel", "SendMessages"] },
+        { "role": "@everyone", "deny": ["ViewChannel"] }
+      ],
+      "channels": [
+        { "name": "batch-2028-chat", "type": "text" },
+        { "name": "batch-2028-announcements", "type": "text" }
+      ]
+    },
+    {
+      "name": "━━ BATCH 2029 ━━",
+      "permissionOverwrites": [
+        { "role": "Batch 2029", "allow": ["ViewChannel", "SendMessages"] },
+        { "role": "@everyone", "deny": ["ViewChannel"] }
+      ],
+      "channels": [
+        { "name": "batch-2029-chat", "type": "text" },
+        { "name": "batch-2029-announcements", "type": "text" }
+      ]
+    },
+    {
+      "name": "━━ BATCH 2030 ━━",
+      "permissionOverwrites": [
+        { "role": "Batch 2030", "allow": ["ViewChannel", "SendMessages"] },
+        { "role": "@everyone", "deny": ["ViewChannel"] }
+      ],
+      "channels": [
+        { "name": "batch-2030-chat", "type": "text" },
+        { "name": "batch-2030-announcements", "type": "text" }
+      ]
+    },
+    {
+      "name": "━━ HOSTEL R1 ━━",
+      "permissionOverwrites": [
+        { "role": "Hostel R1", "allow": ["ViewChannel", "SendMessages"] },
+        { "role": "@everyone", "deny": ["ViewChannel"] }
+      ],
+      "channels": [
+        { "name": "hostel-r1-chat", "type": "text" },
+        { "name": "hostel-r1-announcements", "type": "text" }
+      ]
+    },
+    {
+      "name": "━━ HOSTEL R2 ━━",
+      "permissionOverwrites": [
+        { "role": "Hostel R2", "allow": ["ViewChannel", "SendMessages"] },
+        { "role": "@everyone", "deny": ["ViewChannel"] }
+      ],
+      "channels": [
+        { "name": "hostel-r2-chat", "type": "text" },
+        { "name": "hostel-r2-announcements", "type": "text" }
+      ]
+    },
+    {
+      "name": "━━ HOSTEL R3 ━━",
+      "permissionOverwrites": [
+        { "role": "Hostel R3", "allow": ["ViewChannel", "SendMessages"] },
+        { "role": "@everyone", "deny": ["ViewChannel"] }
+      ],
+      "channels": [
+        { "name": "hostel-r3-chat", "type": "text" },
+        { "name": "hostel-r3-announcements", "type": "text" }
+      ]
+    },
+    {
+      "name": "━━ HOSTEL R4 ━━",
+      "permissionOverwrites": [
+        { "role": "Hostel R4", "allow": ["ViewChannel", "SendMessages"] },
+        { "role": "@everyone", "deny": ["ViewChannel"] }
+      ],
+      "channels": [
+        { "name": "hostel-r4-chat", "type": "text" },
+        { "name": "hostel-r4-announcements", "type": "text" }
+      ]
+    },
+    {
+      "name": "━━ HOSTEL COMMON ━━",
+      "channels": [
+        { "name": "hostel-general", "type": "text" },
+        { "name": "hostel-lost-and-found", "type": "text" },
+        { "name": "hostel-food-review", "type": "text" }
+      ]
+    },
+    {
+      "name": "━━ ACADEMICS 2027 ━━",
+      "permissionOverwrites": [
+        { "role": "Batch 2027", "allow": ["ViewChannel", "SendMessages"] },
+        { "role": "@everyone", "deny": ["ViewChannel"] }
+      ],
+      "channels": [
+        { "name": "2027-resources", "type": "text" },
+        { "name": "2027-doubts", "type": "text" },
+        { "name": "2027-exam-discussions", "type": "text" }
+      ]
+    },
+    {
+      "name": "━━ ACADEMICS 2028 ━━",
+      "permissionOverwrites": [
+        { "role": "Batch 2028", "allow": ["ViewChannel", "SendMessages"] },
+        { "role": "@everyone", "deny": ["ViewChannel"] }
+      ],
+      "channels": [
+        { "name": "2028-resources", "type": "text" },
+        { "name": "2028-doubts", "type": "text" },
+        { "name": "2028-exam-discussions", "type": "text" }
+      ]
+    },
+    {
+      "name": "━━ ACADEMICS 2029 ━━",
+      "permissionOverwrites": [
+        { "role": "Batch 2029", "allow": ["ViewChannel", "SendMessages"] },
+        { "role": "@everyone", "deny": ["ViewChannel"] }
+      ],
+      "channels": [
+        { "name": "2029-resources", "type": "text" },
+        { "name": "2029-doubts", "type": "text" },
+        { "name": "2029-exam-discussions", "type": "text" }
+      ]
+    },
+    {
+      "name": "━━ ACADEMICS 2030 ━━",
+      "permissionOverwrites": [
+        { "role": "Batch 2030", "allow": ["ViewChannel", "SendMessages"] },
+        { "role": "@everyone", "deny": ["ViewChannel"] }
+      ],
+      "channels": [
+        { "name": "2030-resources", "type": "text" },
+        { "name": "2030-doubts", "type": "text" },
+        { "name": "2030-exam-discussions", "type": "text" }
+      ]
+    },
+    {
+      "name": "━━━ TECH COMMUNITY ━━━",
+      "channels": [
+        { "name": "web-dev", "type": "text" },
+        { "name": "app-dev", "type": "text" },
+        { "name": "ai-ml", "type": "text" },
+        { "name": "cybersecurity", "type": "text" },
+        { "name": "open-source", "type": "text" },
+        { "name": "tech-news", "type": "text" },
+        { "name": "project-showcase", "type": "text" },
+        { "name": "tech-voice", "type": "voice" }
+      ]
+    },
+    {
+      "name": "━━━ DSA COMMUNITY ━━━",
+      "channels": [
+        { "name": "daily-problem", "type": "text" },
+        { "name": "dsa-discussion", "type": "text" },
+        { "name": "dsa-resources", "type": "text" },
+        { "name": "dsa-voice", "type": "voice" }
+      ]
+    },
+    {
+      "name": "━━━ STARTUP COMMUNITY ━━━",
+      "channels": [
+        { "name": "startup-hub", "type": "text" },
+        { "name": "founder-circle", "type": "text" },
+        { "name": "builders", "type": "text" },
+        { "name": "startup-resources", "type": "text" }
+      ]
+    },
+    {
+      "name": "━━━ CAREER ZONE ━━━",
+      "channels": [
+        { "name": "internships", "type": "text" },
+        { "name": "placements", "type": "text" },
+        { "name": "resume-review", "type": "text" },
+        { "name": "career-advice", "type": "text" }
+      ]
+    },
+    {
+      "name": "━━━ COMMUNITY ━━━",
+      "channels": [
+        { "name": "suggestions", "type": "text" },
+        { "name": "feedback", "type": "text" },
+        { "name": "bot-commands", "type": "text" }
+      ]
+    },
+    {
+      "name": "━━━ EVENTS & CLUBS ━━━",
+      "channels": [
+        { "name": "event-announcements", "type": "text" },
+        { "name": "hackathons", "type": "text" },
+        { "name": "club-activities", "type": "text" },
+        { "name": "event-photos", "type": "text" }
+      ]
+    },
+    {
+      "name": "━━━ ACHIEVEMENTS ━━━",
+      "channels": [
+        { "name": "wins-and-achievements", "type": "text" },
+        { "name": "hall-of-fame", "type": "text" }
+      ]
+    },
+    {
+      "name": "🔒 SECRET SECTION 🔒",
+      "permissionOverwrites": [
+        { "role": "Inner Circle", "allow": ["ViewChannel", "SendMessages", "Connect", "Speak"] },
+        { "role": "@everyone", "deny": ["ViewChannel"] }
+      ],
+      "channels": [
+        { "name": "inner-circle-chat", "type": "text" },
+        { "name": "inner-circle-voice", "type": "voice" }
+      ]
+    }
+  ]
+}

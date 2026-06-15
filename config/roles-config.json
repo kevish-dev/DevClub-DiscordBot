@@ -1,0 +1,65 @@
+{
+  "roleGroups": [
+    {
+      "group": "Academic",
+      "description": "Select your batch year",
+      "selfAssignable": true,
+      "roles": [
+        { "name": "Batch 2027", "color": "#2980B9" },
+        { "name": "Batch 2028", "color": "#3498DB" },
+        { "name": "Batch 2029", "color": "#5DADE2" },
+        { "name": "Batch 2030", "color": "#85C1E9" }
+      ]
+    },
+    {
+      "group": "Hostel",
+      "description": "Select your hostel",
+      "selfAssignable": true,
+      "roles": [
+        { "name": "Hostel R1", "color": "#27AE60" },
+        { "name": "Hostel R2", "color": "#2ECC71" },
+        { "name": "Hostel R3", "color": "#58D68D" },
+        { "name": "Hostel R4", "color": "#82E0AA" }
+      ]
+    },
+    {
+      "group": "Interest",
+      "description": "Pick your interests (select as many as you like)",
+      "selfAssignable": true,
+      "roles": [
+        { "name": "Web Developer",   "color": "#E67E22" },
+        { "name": "AI Engineer",     "color": "#D35400" },
+        { "name": "ML Engineer",     "color": "#CA6F1E" },
+        { "name": "Designer",        "color": "#F39C12" },
+        { "name": "Startup Founder", "color": "#E74C3C" },
+        { "name": "Open Source",     "color": "#1ABC9C" },
+        { "name": "DSA Warrior",     "color": "#8E44AD" },
+        { "name": "Content Creator", "color": "#3498DB" },
+        { "name": "Gamer",           "color": "#2ECC71" }
+      ]
+    },
+    {
+      "group": "Prestige",
+      "description": "Awarded by admins only — do not self-assign",
+      "selfAssignable": false,
+      "hoist": true,
+      "roles": [
+        { "name": "Hackathon Winner",  "color": "#F1C40F" },
+        { "name": "Top Contributor",   "color": "#F39C12" },
+        { "name": "Mentor",            "color": "#9B59B6" },
+        { "name": "Founder",           "color": "#E74C3C" },
+        { "name": "Alumni",            "color": "#1ABC9C" },
+        { "name": "Moderator",         "color": "#E91E63" }
+      ]
+    },
+    {
+      "group": "Special",
+      "description": "System roles — managed by bot",
+      "selfAssignable": false,
+      "roles": [
+        { "name": "Inner Circle", "color": "#E74C3C" },
+        { "name": "New Member",   "color": "#95A5A6" }
+      ]
+    }
+  ]
+}
