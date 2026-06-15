@@ -1,240 +1,408 @@
 {
   "categories": [
     {
+      "_comment": "INFORMATION — All channels are read-only for regular members. Only bot writes to #welcome. Moderators can post in #announcements.",
       "name": "━━━ INFORMATION ━━━",
-      "channels": [
-        { "name": "welcome", "type": "text" },
-        { "name": "rules", "type": "text" },
-        { "name": "announcements", "type": "text" },
-        { "name": "start-here", "type": "text" },
-        { "name": "roles", "type": "text" }
-      ]
-    },
-    {
-      "name": "━━━ GENERAL HUB ━━━",
-      "channels": [
-        { "name": "general-chat", "type": "text" },
-        { "name": "memes", "type": "text" },
-        { "name": "off-topic", "type": "text" },
-        { "name": "introductions", "type": "text" }
-      ]
-    },
-    {
-      "name": "━━ BATCH 2027 ━━",
       "permissionOverwrites": [
-        { "role": "Batch 2027", "allow": ["ViewChannel", "SendMessages"] },
-        { "role": "@everyone", "deny": ["ViewChannel"] }
+        { "role": "@everyone", "allow": ["ViewChannel", "ReadMessageHistory"], "deny": ["SendMessages", "CreatePublicThreads", "CreatePrivateThreads", "SendMessagesInThreads", "AddReactions"] }
       ],
       "channels": [
-        { "name": "batch-2027-chat", "type": "text" },
-        { "name": "batch-2027-announcements", "type": "text" }
+        {
+          "name": "welcome",
+          "type": "text",
+          "topic": "👋 Welcome messages — this channel is bot-managed"
+        },
+        {
+          "name": "start-here",
+          "type": "text",
+          "topic": "📌 Server guide & getting started — read-only"
+        },
+        {
+          "name": "rules",
+          "type": "text",
+          "topic": "📜 Server rules — read-only"
+        },
+        {
+          "name": "announcements",
+          "type": "text",
+          "topic": "📢 Official announcements",
+          "permissionOverwrites": [
+            { "role": "Moderator", "allow": ["SendMessages", "EmbedLinks", "AttachFiles", "MentionEveryone"] }
+          ]
+        },
+        {
+          "name": "roles",
+          "type": "text",
+          "topic": "🏷️ Role descriptions & self-assignment — read-only"
+        }
+      ]
+    },
+
+    {
+      "_comment": "GENERAL HUB — Open to everyone, standard chat permissions. Members can't manage messages.",
+      "name": "━━━ GENERAL HUB ━━━",
+      "permissionOverwrites": [
+        { "role": "@everyone", "allow": ["ViewChannel", "SendMessages", "ReadMessageHistory", "AddReactions", "EmbedLinks", "AttachFiles", "UseExternalEmojis"], "deny": ["ManageMessages", "ManageChannels", "MentionEveryone"] }
+      ],
+      "channels": [
+        {
+          "name": "general-chat",
+          "type": "text",
+          "topic": "💬 General discussion — keep it friendly!"
+        },
+        {
+          "name": "introductions",
+          "type": "text",
+          "topic": "👋 Introduce yourself to the community"
+        },
+        {
+          "name": "memes",
+          "type": "text",
+          "topic": "😂 Memes & fun content"
+        }
+      ]
+    },
+
+    {
+      "_comment": "UNIVERSITY HUB — Cross-batch common space. Everyone can see and chat here.",
+      "name": "━━━ UNIVERSITY HUB ━━━",
+      "permissionOverwrites": [
+        { "role": "@everyone", "allow": ["ViewChannel", "SendMessages", "ReadMessageHistory", "AddReactions"], "deny": ["ManageMessages", "ManageChannels", "MentionEveryone"] }
+      ],
+      "channels": [
+        {
+          "name": "all-batches-chat",
+          "type": "text",
+          "topic": "🏫 Cross-batch discussion — all years welcome!"
+        },
+        {
+          "name": "seniors-juniors-qa",
+          "type": "text",
+          "topic": "🎓 Ask seniors for advice, help juniors out"
+        },
+        {
+          "name": "campus-voice",
+          "type": "voice"
+        }
+      ]
+    },
+
+    {
+      "_comment": "BATCH 2027 — Locked to Batch 2027 role only. Hidden from others.",
+      "name": "━━ BATCH 2027 ━━",
+      "permissionOverwrites": [
+        { "role": "@everyone", "deny": ["ViewChannel"] },
+        { "role": "Batch 2027", "allow": ["ViewChannel", "SendMessages", "ReadMessageHistory", "AddReactions", "EmbedLinks", "AttachFiles"], "deny": ["ManageMessages", "ManageChannels", "MentionEveryone"] },
+        { "role": "Moderator", "allow": ["ViewChannel", "SendMessages", "ManageMessages", "MentionEveryone"] }
+      ],
+      "channels": [
+        { "name": "batch-2027-chat", "type": "text", "topic": "💬 Batch 2027 general chat" },
+        {
+          "name": "batch-2027-announcements",
+          "type": "text",
+          "topic": "📢 Batch 2027 announcements",
+          "permissionOverwrites": [
+            { "role": "Batch 2027", "deny": ["SendMessages"], "allow": ["ViewChannel", "ReadMessageHistory"] },
+            { "role": "Moderator", "allow": ["SendMessages", "EmbedLinks", "MentionEveryone"] }
+          ]
+        }
       ]
     },
     {
       "name": "━━ BATCH 2028 ━━",
       "permissionOverwrites": [
-        { "role": "Batch 2028", "allow": ["ViewChannel", "SendMessages"] },
-        { "role": "@everyone", "deny": ["ViewChannel"] }
+        { "role": "@everyone", "deny": ["ViewChannel"] },
+        { "role": "Batch 2028", "allow": ["ViewChannel", "SendMessages", "ReadMessageHistory", "AddReactions", "EmbedLinks", "AttachFiles"], "deny": ["ManageMessages", "ManageChannels", "MentionEveryone"] },
+        { "role": "Moderator", "allow": ["ViewChannel", "SendMessages", "ManageMessages", "MentionEveryone"] }
       ],
       "channels": [
-        { "name": "batch-2028-chat", "type": "text" },
-        { "name": "batch-2028-announcements", "type": "text" }
+        { "name": "batch-2028-chat", "type": "text", "topic": "💬 Batch 2028 general chat" },
+        {
+          "name": "batch-2028-announcements",
+          "type": "text",
+          "topic": "📢 Batch 2028 announcements",
+          "permissionOverwrites": [
+            { "role": "Batch 2028", "deny": ["SendMessages"], "allow": ["ViewChannel", "ReadMessageHistory"] },
+            { "role": "Moderator", "allow": ["SendMessages", "EmbedLinks", "MentionEveryone"] }
+          ]
+        }
       ]
     },
     {
       "name": "━━ BATCH 2029 ━━",
       "permissionOverwrites": [
-        { "role": "Batch 2029", "allow": ["ViewChannel", "SendMessages"] },
-        { "role": "@everyone", "deny": ["ViewChannel"] }
+        { "role": "@everyone", "deny": ["ViewChannel"] },
+        { "role": "Batch 2029", "allow": ["ViewChannel", "SendMessages", "ReadMessageHistory", "AddReactions", "EmbedLinks", "AttachFiles"], "deny": ["ManageMessages", "ManageChannels", "MentionEveryone"] },
+        { "role": "Moderator", "allow": ["ViewChannel", "SendMessages", "ManageMessages", "MentionEveryone"] }
       ],
       "channels": [
-        { "name": "batch-2029-chat", "type": "text" },
-        { "name": "batch-2029-announcements", "type": "text" }
+        { "name": "batch-2029-chat", "type": "text", "topic": "💬 Batch 2029 general chat" },
+        {
+          "name": "batch-2029-announcements",
+          "type": "text",
+          "topic": "📢 Batch 2029 announcements",
+          "permissionOverwrites": [
+            { "role": "Batch 2029", "deny": ["SendMessages"], "allow": ["ViewChannel", "ReadMessageHistory"] },
+            { "role": "Moderator", "allow": ["SendMessages", "EmbedLinks", "MentionEveryone"] }
+          ]
+        }
       ]
     },
     {
       "name": "━━ BATCH 2030 ━━",
       "permissionOverwrites": [
-        { "role": "Batch 2030", "allow": ["ViewChannel", "SendMessages"] },
-        { "role": "@everyone", "deny": ["ViewChannel"] }
+        { "role": "@everyone", "deny": ["ViewChannel"] },
+        { "role": "Batch 2030", "allow": ["ViewChannel", "SendMessages", "ReadMessageHistory", "AddReactions", "EmbedLinks", "AttachFiles"], "deny": ["ManageMessages", "ManageChannels", "MentionEveryone"] },
+        { "role": "Moderator", "allow": ["ViewChannel", "SendMessages", "ManageMessages", "MentionEveryone"] }
       ],
       "channels": [
-        { "name": "batch-2030-chat", "type": "text" },
-        { "name": "batch-2030-announcements", "type": "text" }
+        { "name": "batch-2030-chat", "type": "text", "topic": "💬 Batch 2030 general chat" },
+        {
+          "name": "batch-2030-announcements",
+          "type": "text",
+          "topic": "📢 Batch 2030 announcements",
+          "permissionOverwrites": [
+            { "role": "Batch 2030", "deny": ["SendMessages"], "allow": ["ViewChannel", "ReadMessageHistory"] },
+            { "role": "Moderator", "allow": ["SendMessages", "EmbedLinks", "MentionEveryone"] }
+          ]
+        }
       ]
     },
+
     {
+      "_comment": "HOSTEL R1 — Locked to Hostel R1 role. Hidden from non-residents.",
       "name": "━━ HOSTEL R1 ━━",
       "permissionOverwrites": [
-        { "role": "Hostel R1", "allow": ["ViewChannel", "SendMessages"] },
-        { "role": "@everyone", "deny": ["ViewChannel"] }
+        { "role": "@everyone", "deny": ["ViewChannel"] },
+        { "role": "Hostel R1", "allow": ["ViewChannel", "SendMessages", "ReadMessageHistory", "AddReactions", "AttachFiles"], "deny": ["ManageMessages", "ManageChannels"] },
+        { "role": "Moderator", "allow": ["ViewChannel", "SendMessages", "ManageMessages"] }
       ],
       "channels": [
-        { "name": "hostel-r1-chat", "type": "text" },
-        { "name": "hostel-r1-announcements", "type": "text" }
+        { "name": "hostel-r1-chat", "type": "text", "topic": "🏠 R1 residents chat" },
+        { "name": "hostel-r1-announcements", "type": "text", "topic": "📢 R1 announcements" }
       ]
     },
     {
       "name": "━━ HOSTEL R2 ━━",
       "permissionOverwrites": [
-        { "role": "Hostel R2", "allow": ["ViewChannel", "SendMessages"] },
-        { "role": "@everyone", "deny": ["ViewChannel"] }
+        { "role": "@everyone", "deny": ["ViewChannel"] },
+        { "role": "Hostel R2", "allow": ["ViewChannel", "SendMessages", "ReadMessageHistory", "AddReactions", "AttachFiles"], "deny": ["ManageMessages", "ManageChannels"] },
+        { "role": "Moderator", "allow": ["ViewChannel", "SendMessages", "ManageMessages"] }
       ],
       "channels": [
-        { "name": "hostel-r2-chat", "type": "text" },
-        { "name": "hostel-r2-announcements", "type": "text" }
+        { "name": "hostel-r2-chat", "type": "text", "topic": "🏠 R2 residents chat" },
+        { "name": "hostel-r2-announcements", "type": "text", "topic": "📢 R2 announcements" }
       ]
     },
     {
       "name": "━━ HOSTEL R3 ━━",
       "permissionOverwrites": [
-        { "role": "Hostel R3", "allow": ["ViewChannel", "SendMessages"] },
-        { "role": "@everyone", "deny": ["ViewChannel"] }
+        { "role": "@everyone", "deny": ["ViewChannel"] },
+        { "role": "Hostel R3", "allow": ["ViewChannel", "SendMessages", "ReadMessageHistory", "AddReactions", "AttachFiles"], "deny": ["ManageMessages", "ManageChannels"] },
+        { "role": "Moderator", "allow": ["ViewChannel", "SendMessages", "ManageMessages"] }
       ],
       "channels": [
-        { "name": "hostel-r3-chat", "type": "text" },
-        { "name": "hostel-r3-announcements", "type": "text" }
+        { "name": "hostel-r3-chat", "type": "text", "topic": "🏠 R3 residents chat" },
+        { "name": "hostel-r3-announcements", "type": "text", "topic": "📢 R3 announcements" }
       ]
     },
     {
       "name": "━━ HOSTEL R4 ━━",
       "permissionOverwrites": [
-        { "role": "Hostel R4", "allow": ["ViewChannel", "SendMessages"] },
-        { "role": "@everyone", "deny": ["ViewChannel"] }
+        { "role": "@everyone", "deny": ["ViewChannel"] },
+        { "role": "Hostel R4", "allow": ["ViewChannel", "SendMessages", "ReadMessageHistory", "AddReactions", "AttachFiles"], "deny": ["ManageMessages", "ManageChannels"] },
+        { "role": "Moderator", "allow": ["ViewChannel", "SendMessages", "ManageMessages"] }
       ],
       "channels": [
-        { "name": "hostel-r4-chat", "type": "text" },
-        { "name": "hostel-r4-announcements", "type": "text" }
+        { "name": "hostel-r4-chat", "type": "text", "topic": "🏠 R4 residents chat" },
+        { "name": "hostel-r4-announcements", "type": "text", "topic": "📢 R4 announcements" }
       ]
     },
     {
+      "_comment": "HOSTEL COMMON — All hostel residents (any R1-R4 role) can see, but also open to everyone for general hostel topics.",
       "name": "━━ HOSTEL COMMON ━━",
+      "permissionOverwrites": [
+        { "role": "@everyone", "allow": ["ViewChannel", "SendMessages", "ReadMessageHistory", "AddReactions"], "deny": ["ManageMessages", "ManageChannels"] }
+      ],
       "channels": [
-        { "name": "hostel-general", "type": "text" },
-        { "name": "hostel-lost-and-found", "type": "text" },
-        { "name": "hostel-food-review", "type": "text" }
+        { "name": "hostel-general", "type": "text", "topic": "🏠 General hostel discussion" },
+        { "name": "hostel-lost-and-found", "type": "text", "topic": "🔍 Lost something? Found something?" },
+        { "name": "hostel-food-review", "type": "text", "topic": "🍽️ Mess food reviews & ratings" }
       ]
     },
+
     {
+      "_comment": "ACADEMICS per batch — Locked to respective batch role. Resources, doubts, exam prep.",
       "name": "━━ ACADEMICS 2027 ━━",
       "permissionOverwrites": [
-        { "role": "Batch 2027", "allow": ["ViewChannel", "SendMessages"] },
-        { "role": "@everyone", "deny": ["ViewChannel"] }
+        { "role": "@everyone", "deny": ["ViewChannel"] },
+        { "role": "Batch 2027", "allow": ["ViewChannel", "SendMessages", "ReadMessageHistory", "AddReactions", "EmbedLinks", "AttachFiles"], "deny": ["ManageMessages", "ManageChannels"] },
+        { "role": "Moderator", "allow": ["ViewChannel", "SendMessages", "ManageMessages"] }
       ],
       "channels": [
-        { "name": "2027-resources", "type": "text" },
-        { "name": "2027-doubts", "type": "text" },
-        { "name": "2027-exam-discussions", "type": "text" }
+        { "name": "2027-resources", "type": "text", "topic": "📚 Batch 2027 study materials & resources" },
+        { "name": "2027-doubts", "type": "text", "topic": "❓ Ask and answer academic doubts" },
+        { "name": "2027-exam-discussions", "type": "text", "topic": "📝 Exam prep & discussions" }
       ]
     },
     {
       "name": "━━ ACADEMICS 2028 ━━",
       "permissionOverwrites": [
-        { "role": "Batch 2028", "allow": ["ViewChannel", "SendMessages"] },
-        { "role": "@everyone", "deny": ["ViewChannel"] }
+        { "role": "@everyone", "deny": ["ViewChannel"] },
+        { "role": "Batch 2028", "allow": ["ViewChannel", "SendMessages", "ReadMessageHistory", "AddReactions", "EmbedLinks", "AttachFiles"], "deny": ["ManageMessages", "ManageChannels"] },
+        { "role": "Moderator", "allow": ["ViewChannel", "SendMessages", "ManageMessages"] }
       ],
       "channels": [
-        { "name": "2028-resources", "type": "text" },
-        { "name": "2028-doubts", "type": "text" },
-        { "name": "2028-exam-discussions", "type": "text" }
+        { "name": "2028-resources", "type": "text", "topic": "📚 Batch 2028 study materials & resources" },
+        { "name": "2028-doubts", "type": "text", "topic": "❓ Ask and answer academic doubts" },
+        { "name": "2028-exam-discussions", "type": "text", "topic": "📝 Exam prep & discussions" }
       ]
     },
     {
       "name": "━━ ACADEMICS 2029 ━━",
       "permissionOverwrites": [
-        { "role": "Batch 2029", "allow": ["ViewChannel", "SendMessages"] },
-        { "role": "@everyone", "deny": ["ViewChannel"] }
+        { "role": "@everyone", "deny": ["ViewChannel"] },
+        { "role": "Batch 2029", "allow": ["ViewChannel", "SendMessages", "ReadMessageHistory", "AddReactions", "EmbedLinks", "AttachFiles"], "deny": ["ManageMessages", "ManageChannels"] },
+        { "role": "Moderator", "allow": ["ViewChannel", "SendMessages", "ManageMessages"] }
       ],
       "channels": [
-        { "name": "2029-resources", "type": "text" },
-        { "name": "2029-doubts", "type": "text" },
-        { "name": "2029-exam-discussions", "type": "text" }
+        { "name": "2029-resources", "type": "text", "topic": "📚 Batch 2029 study materials & resources" },
+        { "name": "2029-doubts", "type": "text", "topic": "❓ Ask and answer academic doubts" },
+        { "name": "2029-exam-discussions", "type": "text", "topic": "📝 Exam prep & discussions" }
       ]
     },
     {
       "name": "━━ ACADEMICS 2030 ━━",
       "permissionOverwrites": [
-        { "role": "Batch 2030", "allow": ["ViewChannel", "SendMessages"] },
-        { "role": "@everyone", "deny": ["ViewChannel"] }
+        { "role": "@everyone", "deny": ["ViewChannel"] },
+        { "role": "Batch 2030", "allow": ["ViewChannel", "SendMessages", "ReadMessageHistory", "AddReactions", "EmbedLinks", "AttachFiles"], "deny": ["ManageMessages", "ManageChannels"] },
+        { "role": "Moderator", "allow": ["ViewChannel", "SendMessages", "ManageMessages"] }
       ],
       "channels": [
-        { "name": "2030-resources", "type": "text" },
-        { "name": "2030-doubts", "type": "text" },
-        { "name": "2030-exam-discussions", "type": "text" }
+        { "name": "2030-resources", "type": "text", "topic": "📚 Batch 2030 study materials & resources" },
+        { "name": "2030-doubts", "type": "text", "topic": "❓ Ask and answer academic doubts" },
+        { "name": "2030-exam-discussions", "type": "text", "topic": "📝 Exam prep & discussions" }
       ]
     },
+
     {
+      "_comment": "TECH COMMUNITY — Open to all. Members can't delete others' messages.",
       "name": "━━━ TECH COMMUNITY ━━━",
+      "permissionOverwrites": [
+        { "role": "@everyone", "allow": ["ViewChannel", "SendMessages", "ReadMessageHistory", "AddReactions", "EmbedLinks", "AttachFiles", "UseExternalEmojis"], "deny": ["ManageMessages", "ManageChannels", "MentionEveryone"] }
+      ],
       "channels": [
-        { "name": "web-dev", "type": "text" },
-        { "name": "app-dev", "type": "text" },
-        { "name": "ai-ml", "type": "text" },
-        { "name": "cybersecurity", "type": "text" },
-        { "name": "open-source", "type": "text" },
-        { "name": "tech-news", "type": "text" },
-        { "name": "project-showcase", "type": "text" },
+        { "name": "web-dev", "type": "text", "topic": "🌐 Web development discussion" },
+        { "name": "app-dev", "type": "text", "topic": "📱 Mobile app development" },
+        { "name": "ai-ml", "type": "text", "topic": "🤖 AI & Machine Learning" },
+        { "name": "cybersecurity", "type": "text", "topic": "🔒 Cybersecurity & infosec" },
+        { "name": "open-source", "type": "text", "topic": "🌍 Open source contributions" },
+        { "name": "tech-news", "type": "text", "topic": "📰 Latest tech news & trends" },
+        { "name": "project-showcase", "type": "text", "topic": "🚀 Show off your projects!" },
         { "name": "tech-voice", "type": "voice" }
       ]
     },
+
     {
       "name": "━━━ DSA COMMUNITY ━━━",
+      "permissionOverwrites": [
+        { "role": "@everyone", "allow": ["ViewChannel", "SendMessages", "ReadMessageHistory", "AddReactions", "EmbedLinks"], "deny": ["ManageMessages", "ManageChannels", "MentionEveryone"] }
+      ],
       "channels": [
-        { "name": "daily-problem", "type": "text" },
-        { "name": "dsa-discussion", "type": "text" },
-        { "name": "dsa-resources", "type": "text" },
+        { "name": "daily-problem", "type": "text", "topic": "📋 Daily DSA challenge" },
+        { "name": "dsa-discussion", "type": "text", "topic": "💡 Discuss approaches & solutions" },
+        { "name": "dsa-resources", "type": "text", "topic": "📚 Curated DSA learning resources" },
         { "name": "dsa-voice", "type": "voice" }
       ]
     },
+
     {
       "name": "━━━ STARTUP COMMUNITY ━━━",
-      "channels": [
-        { "name": "startup-hub", "type": "text" },
-        { "name": "founder-circle", "type": "text" },
-        { "name": "builders", "type": "text" },
-        { "name": "startup-resources", "type": "text" }
-      ]
-    },
-    {
-      "name": "━━━ CAREER ZONE ━━━",
-      "channels": [
-        { "name": "internships", "type": "text" },
-        { "name": "placements", "type": "text" },
-        { "name": "resume-review", "type": "text" },
-        { "name": "career-advice", "type": "text" }
-      ]
-    },
-    {
-      "name": "━━━ COMMUNITY ━━━",
-      "channels": [
-        { "name": "suggestions", "type": "text" },
-        { "name": "feedback", "type": "text" },
-        { "name": "bot-commands", "type": "text" }
-      ]
-    },
-    {
-      "name": "━━━ EVENTS & CLUBS ━━━",
-      "channels": [
-        { "name": "event-announcements", "type": "text" },
-        { "name": "hackathons", "type": "text" },
-        { "name": "club-activities", "type": "text" },
-        { "name": "event-photos", "type": "text" }
-      ]
-    },
-    {
-      "name": "━━━ ACHIEVEMENTS ━━━",
-      "channels": [
-        { "name": "wins-and-achievements", "type": "text" },
-        { "name": "hall-of-fame", "type": "text" }
-      ]
-    },
-    {
-      "name": "🔒 SECRET SECTION 🔒",
       "permissionOverwrites": [
-        { "role": "Inner Circle", "allow": ["ViewChannel", "SendMessages", "Connect", "Speak"] },
-        { "role": "@everyone", "deny": ["ViewChannel"] }
+        { "role": "@everyone", "allow": ["ViewChannel", "SendMessages", "ReadMessageHistory", "AddReactions", "EmbedLinks", "AttachFiles"], "deny": ["ManageMessages", "ManageChannels", "MentionEveryone"] }
       ],
       "channels": [
-        { "name": "inner-circle-chat", "type": "text" },
+        { "name": "startup-hub", "type": "text", "topic": "🚀 Startup ideas & discussions" },
+        { "name": "founder-circle", "type": "text", "topic": "👥 For founders building products" },
+        { "name": "builders", "type": "text", "topic": "🔨 Building in public" },
+        { "name": "startup-resources", "type": "text", "topic": "📖 Guides, funding info, tools" }
+      ]
+    },
+
+    {
+      "name": "━━━ CAREER ZONE ━━━",
+      "permissionOverwrites": [
+        { "role": "@everyone", "allow": ["ViewChannel", "SendMessages", "ReadMessageHistory", "AddReactions", "EmbedLinks", "AttachFiles"], "deny": ["ManageMessages", "ManageChannels", "MentionEveryone"] }
+      ],
+      "channels": [
+        { "name": "internships", "type": "text", "topic": "💼 Internship opportunities & experiences" },
+        { "name": "placements", "type": "text", "topic": "🎯 Placement prep & offers" },
+        { "name": "resume-review", "type": "text", "topic": "📄 Get feedback on your resume" },
+        { "name": "career-advice", "type": "text", "topic": "🧭 Career guidance & mentorship" }
+      ]
+    },
+
+    {
+      "name": "━━━ COMMUNITY ━━━",
+      "permissionOverwrites": [
+        { "role": "@everyone", "allow": ["ViewChannel", "SendMessages", "ReadMessageHistory", "AddReactions"], "deny": ["ManageMessages", "ManageChannels", "MentionEveryone"] }
+      ],
+      "channels": [
+        { "name": "suggestions", "type": "text", "topic": "💡 Suggest improvements for the server" },
+        { "name": "feedback", "type": "text", "topic": "📝 Share your feedback" },
+        { "name": "bot-commands", "type": "text", "topic": "🤖 Use bot commands here" }
+      ]
+    },
+
+    {
+      "name": "━━━ EVENTS & CLUBS ━━━",
+      "permissionOverwrites": [
+        { "role": "@everyone", "allow": ["ViewChannel", "ReadMessageHistory", "AddReactions"], "deny": ["ManageMessages", "ManageChannels", "MentionEveryone"] }
+      ],
+      "channels": [
+        {
+          "name": "event-announcements",
+          "type": "text",
+          "topic": "📢 Upcoming events — read-only",
+          "permissionOverwrites": [
+            { "role": "@everyone", "deny": ["SendMessages"] },
+            { "role": "Moderator", "allow": ["SendMessages", "EmbedLinks", "MentionEveryone"] }
+          ]
+        },
+        { "name": "hackathons", "type": "text", "topic": "🏆 Hackathon discussion & teams" },
+        { "name": "club-activities", "type": "text", "topic": "🎭 Club updates & activities" },
+        { "name": "event-photos", "type": "text", "topic": "📸 Share event photos & memories" }
+      ]
+    },
+
+    {
+      "name": "━━━ ACHIEVEMENTS ━━━",
+      "permissionOverwrites": [
+        { "role": "@everyone", "allow": ["ViewChannel", "ReadMessageHistory", "AddReactions"], "deny": ["SendMessages", "ManageMessages", "ManageChannels"] }
+      ],
+      "channels": [
+        {
+          "name": "wins-and-achievements",
+          "type": "text",
+          "topic": "🏅 Community achievements — use /post-achievement to share yours!"
+        },
+        {
+          "name": "hall-of-fame",
+          "type": "text",
+          "topic": "🏆 Outstanding achievements — read-only"
+        }
+      ]
+    },
+
+    {
+      "_comment": "SECRET SECTION — Completely hidden unless user has Inner Circle role.",
+      "name": "🔒 SECRET SECTION 🔒",
+      "permissionOverwrites": [
+        { "role": "@everyone", "deny": ["ViewChannel"] },
+        { "role": "Inner Circle", "allow": ["ViewChannel", "SendMessages", "ReadMessageHistory", "AddReactions", "Connect", "Speak", "EmbedLinks", "AttachFiles"], "deny": ["ManageMessages", "ManageChannels"] }
+      ],
+      "channels": [
+        { "name": "inner-circle-chat", "type": "text", "topic": "🔒 Exclusive inner circle discussion" },
         { "name": "inner-circle-voice", "type": "voice" }
       ]
     }

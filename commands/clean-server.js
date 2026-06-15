@@ -101,29 +101,11 @@ module.exports = {
         }
       }
 
-      // ── 5. Create fresh #welcome and #general-chat ──────
-      const welcome = await guild.channels.create({
-        name: 'welcome',
-        type: ChannelType.GuildText,
-        topic: 'Welcome to the server! 👋',
-        reason: 'Server clean — fresh start',
-      });
-
-      const generalChat = await guild.channels.create({
-        name: 'general-chat',
-        type: ChannelType.GuildText,
-        topic: 'General discussion 💬',
-        reason: 'Server clean — fresh start',
-      });
-
-      console.log('✅ Created #welcome and #general-chat');
-
-      // ── 6. Send a summary in the new #general-chat ──────
-      await generalChat.send(
+      // ── 5. Send a summary in the new #general-chat ──────
+      await interaction.channel.send(
         `🧹 **Server cleaned by ${interaction.user}**\n` +
           `• Deleted: **${deleted}** channels\n` +
-          `• Errors: **${errors}**\n` +
-          `• Created: #${welcome.name}, #${generalChat.name}\n\n` +
+          `• Errors: **${errors}**\n\n` +
           `Run \`/setup-roles\` then \`/setup-server\` to rebuild the full server structure.`
       );
     } catch (err) {

@@ -38,9 +38,9 @@ module.exports = {
 
     // ── 3. Build the welcome embed ───────────────────
     const embed = new EmbedBuilder()
-      .setTitle('👋  Welcome to Newton School of Technology!')
+      .setTitle('👋  Welcome to Dev Club Server!')
       .setDescription(
-        `Hey ${member}, welcome to the **NST** community! 🎉\n\n` +
+        `Hey ${member}, welcome to the community! 🎉\n\n` +
           `We're now **${guild.memberCount}** members strong.\n\n` +
           `Head over to the **#start-here** channel to get set up, ` +
           `pick your roles, and start connecting with your batch!`
