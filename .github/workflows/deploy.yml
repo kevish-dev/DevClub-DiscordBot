@@ -19,7 +19,7 @@ jobs:
           # The commands to run on your VPS after connecting
           script: |
             # Navigate to the project directory
-            cd ~/DevClub-DiscordBot
+            cd ~/projects/DevClub-DiscordBot
             
             # Pull the latest code from GitHub
             git pull origin main
