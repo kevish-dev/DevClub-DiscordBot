@@ -39,4 +39,4 @@ jobs:
             npm run deploy
 
             # Restart bot
-            pm2 restart nst-bot
+            pm2 restart dev-bot

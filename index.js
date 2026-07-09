@@ -85,5 +85,3 @@ client.once('ready', () => {
 // 5. Log in to Discord using the token from .env
 // -------------------------------------------------
 client.login(process.env.DISCORD_TOKEN);
-
-// Check
