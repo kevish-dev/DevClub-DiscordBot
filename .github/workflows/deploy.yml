@@ -3,7 +3,7 @@ name: Deploy to VPS
 on:
   push:
     branches:
-      - main # Triggers when code is pushed to the main branch
+      - main
 
 jobs:
   deploy:
@@ -16,19 +16,27 @@ jobs:
           host: ${{ secrets.VPS_HOST }}
           username: ${{ secrets.VPS_USERNAME }}
           key: ${{ secrets.VPS_SSH_KEY }}
-          # The commands to run on your VPS after connecting
           script: |
-            # Navigate to the project directory
+            # Load NVM
+            export NVM_DIR="$HOME/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
+            # Verify Node is available
+            node -v
+            npm -v
+            pm2 -v
+
+            # Navigate to project
             cd ~/projects/DevClub-DiscordBot
-            
-            # Pull the latest code from GitHub
+
+            # Update code
             git pull origin main
-            
-            # Install any new dependencies
+
+            # Install dependencies
             npm install
-            
-            # (Optional) Deploy new slash commands to Discord
+
+            # Deploy slash commands
             npm run deploy
-            
-            # Restart the bot using PM2
+
+            # Restart bot
             pm2 restart nst-bot
